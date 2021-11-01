@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "145172236589",
+    "project_id": "juntosapp-48857",
+    "storage_bucket": "juntosapp-48857.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:145172236589:android:0d8fc19980865f252a2ba4",
+        "android_client_info": {
+          "package_name": "com.juntos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "145172236589-srh5sjil3g1rp4o1tah5631piatk284b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.juntos",
+            "certificate_hash": "cd1d25055896da242bff8a131c98ab589e29ef47"
+          }
+        },
+        {
+          "client_id": "145172236589-0g5fbnrot77bu3djmt2cvl5u283161i7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAi3fMix-XnhNKecFadT3DHcs-g2cHTWX0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "145172236589-0g5fbnrot77bu3djmt2cvl5u283161i7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

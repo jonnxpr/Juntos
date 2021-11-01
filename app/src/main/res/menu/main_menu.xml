@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/exercises"
+        android:title="@string/exercises"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_account"/>
+
+    <item android:id="@+id/video"
+        android:title="@string/video"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_video"/>
+
+    <item android:id="@+id/logout"
+        android:title="@string/logout"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/newRoom"
+        android:title="@string/newRoom"
+        app:showAsAction="never" />
+
+</menu>

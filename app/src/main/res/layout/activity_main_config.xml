@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainConfigActivity">
+
+    <TextView
+        android:id="@+id/textView_newRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Select an image first"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_rName"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editText_nickname"
+        app:layout_constraintStart_toStartOf="@+id/editText_nickname"
+        app:layout_constraintTop_toBottomOf="@+id/button_select_roomImage" />
+
+    <EditText
+        android:id="@+id/editText_nickname"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:hint="Nickname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_rName" />
+
+
+    <Button
+        android:id="@+id/button_create"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_btn_rounded"
+        android:text="Create"
+        android:textColor="#fff"
+        app:layout_constraintEnd_toEndOf="@+id/editText_nickname"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editText_nickname"
+        app:layout_constraintTop_toBottomOf="@+id/editText_passRoom" />
+
+    <Button
+        android:id="@+id/button_select_roomImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:text="Photo"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:background="@drawable/bg_btn_image_circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_newRoom" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageView_roomPhoto"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_select_roomImage"
+        app:layout_constraintEnd_toEndOf="@+id/button_select_roomImage"
+        app:layout_constraintStart_toStartOf="@+id/button_select_roomImage"
+        app:layout_constraintTop_toTopOf="@+id/button_select_roomImage"
+        />
+
+    <EditText
+        android:id="@+id/editText_passRoom"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editText_nickname"
+        app:layout_constraintStart_toStartOf="@+id/editText_nickname"
+        app:layout_constraintTop_toBottomOf="@+id/editText_nickname" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
