@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.ContentResolver;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -116,7 +117,12 @@ public class MainConfigActivity extends AppCompatActivity {
         final String filename = UUID.randomUUID().toString();
 
         final StorageReference referencia = FirebaseStorage.getInstance().getReference("/images/"+filename);
-
+        if(mSelectedUri == null) {
+            mSelectedUri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE
+                    + "://" + this.getResources().getResourcePackageName(R.drawable.icone_juntos)
+                    + '/' + this.getResources().getResourceTypeName(R.drawable.icone_juntos)
+                    + '/' + this.getResources().getResourceEntryName(R.drawable.icone_juntos));
+        }
         referencia.putFile(mSelectedUri)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override

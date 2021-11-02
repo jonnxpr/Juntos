@@ -123,6 +123,9 @@ public class RoomsActivity extends AppCompatActivity {
                 Intent intent = new Intent(RoomsActivity.this, MainConfigActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.close:
+                this.finishAffinity();
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

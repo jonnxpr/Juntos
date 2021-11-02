@@ -141,6 +141,9 @@ public class ChatRoomActivity extends AppCompatActivity {
                 Intent intent = new Intent(ChatRoomActivity.this, MainConfigActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.close:
+                this.finishAffinity();
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

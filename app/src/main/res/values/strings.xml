@@ -23,6 +23,7 @@
 
     <string name="logout">Logout</string>
     <string name="newRoom">New room</string>
+    <string name="close">Close app</string>
 
     <string name="contacts">Contacts</string>
     <string name="btn_chat">SEND</string>

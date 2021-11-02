@@ -12,12 +12,16 @@
         app:showAsAction="always"
         android:icon="@drawable/ic_video"/>
 
+    <item android:id="@+id/newRoom"
+        android:title="@string/newRoom"
+        app:showAsAction="never" />
+
     <item android:id="@+id/logout"
         android:title="@string/logout"
         app:showAsAction="never" />
 
-    <item android:id="@+id/newRoom"
-        android:title="@string/newRoom"
+    <item android:id="@+id/close"
+        android:title="@string/close"
         app:showAsAction="never" />
 
 </menu>
