@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
                 Log.i("Teste","Login email: "+ email);
                 Log.i("Teste", "Login password: "+ password);
 
-                if(email == null || email.isEmpty() || password==null || password.isEmpty()){
+                if(email.isEmpty() || password.isEmpty()){
                     Toast.makeText(LoginActivity.this, "All fileds are required", Toast.LENGTH_SHORT).show();
                     return;
                 }
