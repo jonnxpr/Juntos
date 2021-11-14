@@ -6,7 +6,7 @@
         android:icon="@drawable/ic_group" />
 
     <item android:id="@+id/myMessages"
-        android:title="Messages"
+        android:title="@string/myMessage"
         android:icon="@drawable/ic_message" />
 
     <item android:id="@+id/contacts"

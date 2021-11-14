@@ -1,40 +1,47 @@
 <resources>
     <string name="app_name">Juntos</string>
-    <string name="createAccount">Create a new account</string>
+    <string name="createAccount">Criar nova conta</string>
     <string name="login">Login</string>
 
-    <string name="selectPhotoFirst">Select a photo first</string>
-    <string name="register">Register</string>
-    <string name="photo">Photo</string>
-    <string name="emailUsed_SmallPassword">Email used by another account or password is too small.</string>
-    <string name="registerInProgress">Register in progress...</string>
+    <string name="selectPhotoFirst">Selecione uma foto primeiro</string>
+    <string name="selectImageFirst">Selecione uma imagem primeiro</string>
+    <string name="password">Senha</string>
+    <string name="register">Registrar</string>
+    <string name="photo">Foto</string>
+    <string name="emailUsed_SmallPassword">Email já utilizado ou senha é muito pequena.</string>
+    <string name="registerInProgress">Registrando...</string>
 
-    <string name="createwNewRoom">Create a new room</string>
+    <string name="createwNewRoom">Criar nova sala</string>
+    <string name="create">Criar</string>
+    <string name="name">Nome</string>
+    <string name="image">Imagem</string>
+    <string name="nickname">Apelido para a sala</string>
+    <string name="adminpassword">Senha de administrador</string>
 
-    <string name="imageTooBig">This image is too big. Please, choose another image.</string>
-    <string name="somethingWrongHappened">Something wrong happened with the image selection</string>
-    <string name="selectAnImage">Select an image to continue.</string>
-    <string name="descriptionEmpty">Description fild is empty.</string>
+    <string name="imageTooBig">Imagem muito grande. Por favor, selecione outra.</string>
+    <string name="somethingWrongHappened">Algo inesperado aconteceu na seleção da imagem.</string>
+    <string name="selectAnImage">Selecione uma imagem para continuar.</string>
+    <string name="descriptionEmpty">Descrição está vazia.</string>
 
-    <string name="exerciseSaved">Exercise was saved.</string>
+    <string name="exerciseSaved">Exercício foi slavo.</string>
 
-    <string name="best">Best</string>
-    <string name="bestCollaborators">Best Collaborators</string>
+    <string name="best">Líderes</string>
+    <string name="bestCollaborators">Líderes</string>
 
     <string name="logout">Logout</string>
-    <string name="newRoom">New room</string>
-    <string name="close">Close app</string>
+    <string name="newRoom">Nova sala</string>
+    <string name="close">Encerrar</string>
 
-    <string name="contacts">Contacts</string>
+    <string name="contacts">Contatos</string>
     <string name="btn_chat">SEND</string>
-    <string name="message">Type your message here</string>
-    <string name="myMessage">My Messages</string>
-    <string name="rooms">Rooms</string>
-    <string name="questionsDatabase">Questions database</string>
+    <string name="message">Digite a mensagem</string>
+    <string name="myMessage">Mensagens</string>
+    <string name="rooms">Grupos</string>
+    <string name="questionsDatabase">Banco de Questões</string>
     <string name="video">Video</string>
     <string name="videos">Videos</string>
-    <string name="videosList">Videos List</string>
-    <string name="microlearning">Microlearning</string>
+    <string name="videosList">Lista de Vídeos</string>
+    <string name="microlearning">Microconteúdo</string>
     <string name="videoPlayer">Video Player</string>
-    <string name="exercises">exercises</string>
+    <string name="exercises">exercícios</string>
 </resources>
