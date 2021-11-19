@@ -33,4 +33,5 @@
         app:layout_constraintBottom_toBottomOf="@+id/imageView_message_user"
         app:layout_constraintEnd_toStartOf="@+id/imageView_message_user"
         app:layout_constraintTop_toTopOf="@+id/imageView_message_user"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

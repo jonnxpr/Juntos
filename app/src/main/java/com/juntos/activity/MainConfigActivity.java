@@ -45,6 +45,8 @@ public class MainConfigActivity extends AppCompatActivity {
     private ImageView mImgPhoto;
     private Uri mSelectedUri;
 
+    private int CHOOSE_ROOM_IMAGE = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,11 +80,11 @@ public class MainConfigActivity extends AppCompatActivity {
         String password = edtPass.getText().toString();
 
         if(nickname == null || nickname.isEmpty() || name==null || name.isEmpty() || password==null || password.isEmpty()){
-            Toast.makeText(MainConfigActivity.this, "All fileds are required.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainConfigActivity.this, "Todos os campos devem ser preenchidos.", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        Toast.makeText(MainConfigActivity.this, "Fields filled correctly", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(MainConfigActivity.this, "Fields filled correctly", Toast.LENGTH_SHORT).show();
 
         verifyAuthentication();
     }
@@ -93,14 +95,17 @@ public class MainConfigActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if(requestCode == 1) {
-            mSelectedUri = data.getData();
-            Bitmap bitmap = null;
-            try {
-                bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), mSelectedUri);
-                mImgPhoto.setImageDrawable(new BitmapDrawable(bitmap));
-                btn_sel_photo.setAlpha(0);
-            }catch(IOException e){
+        if(requestCode == CHOOSE_ROOM_IMAGE) {
+            if(data != null) {
+                mSelectedUri = data.getData();
+
+                Bitmap bitmap = null;
+                try {
+                    bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), mSelectedUri);
+                    mImgPhoto.setImageDrawable(new BitmapDrawable(bitmap));
+                    btn_sel_photo.setAlpha(0);
+                } catch (IOException e) {
+                }
             }
         }
     }
@@ -110,7 +115,7 @@ public class MainConfigActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_PICK);
         //setar o tipo de coisa que será buscada
         intent.setType("image/*");
-        startActivityForResult(intent, 1);
+        startActivityForResult(intent, CHOOSE_ROOM_IMAGE);
     }
 
     private void saveRoomInFirebase(){
@@ -119,9 +124,9 @@ public class MainConfigActivity extends AppCompatActivity {
         final StorageReference referencia = FirebaseStorage.getInstance().getReference("/images/"+filename);
         if(mSelectedUri == null) {
             mSelectedUri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE
-                    + "://" + this.getResources().getResourcePackageName(R.drawable.icone_juntos)
-                    + '/' + this.getResources().getResourceTypeName(R.drawable.icone_juntos)
-                    + '/' + this.getResources().getResourceEntryName(R.drawable.icone_juntos));
+                    + "://" + this.getResources().getResourcePackageName(R.drawable.teamwork)
+                    + '/' + this.getResources().getResourceTypeName(R.drawable.teamwork)
+                    + '/' + this.getResources().getResourceEntryName(R.drawable.teamwork));
         }
         referencia.putFile(mSelectedUri)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -146,7 +151,7 @@ public class MainConfigActivity extends AppCompatActivity {
                                             @Override
                                             public void onComplete(@NonNull Task<Void> task) {
                                                 Log.i("Teste", "Room created");
-                                                Toast.makeText(MainConfigActivity.this, "Room was created", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(MainConfigActivity.this, "Sala criada com sucesso!", Toast.LENGTH_SHORT).show();
                                             }
                                         })
                                         .addOnFailureListener(new OnFailureListener() {
@@ -175,7 +180,7 @@ public class MainConfigActivity extends AppCompatActivity {
             if(edtPass.getText().toString().equals("@dmin@2021")){
                 saveRoomInFirebase();
             } else {
-                Toast.makeText(this, "Only administrators can create new rooms.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Apenas administradores podem criar novas salas.", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainConfigActivity.this, RoomsActivity.class));
                 finish();
             }

@@ -3,8 +3,8 @@
     <string name="createAccount">Criar nova conta</string>
     <string name="login">Login</string>
 
-    <string name="selectPhotoFirst">Selecione uma foto primeiro</string>
-    <string name="selectImageFirst">Selecione uma imagem primeiro</string>
+    <string name="selectPhotoFirst">Selecione uma foto</string>
+    <string name="selectImageFirst">Selecione uma imagem</string>
     <string name="password">Senha</string>
     <string name="register">Registrar</string>
     <string name="photo">Foto</string>
@@ -26,22 +26,28 @@
     <string name="exerciseSaved">Exercício foi slavo.</string>
 
     <string name="best">Líderes</string>
-    <string name="bestCollaborators">Líderes</string>
+    <string name="bestCollaborators">Melhores Colaboradores</string>
 
     <string name="logout">Logout</string>
     <string name="newRoom">Nova sala</string>
     <string name="close">Encerrar</string>
+    <string name="search">Pesquisar</string>
 
     <string name="contacts">Contatos</string>
+    <string name="selectContact">Selecione contato</string>
     <string name="btn_chat">SEND</string>
     <string name="message">Digite a mensagem</string>
     <string name="myMessage">Mensagens</string>
     <string name="rooms">Grupos</string>
     <string name="questionsDatabase">Banco de Questões</string>
+    <string name="chooseRoomToQuestionDB">Selecione uma sala para o banco de questões.</string>
     <string name="video">Video</string>
     <string name="videos">Videos</string>
+    <string name="chooseRoomToSendVideo">Selecione uma sala para enviar vídeo.</string>
     <string name="videosList">Lista de Vídeos</string>
     <string name="microlearning">Microconteúdo</string>
     <string name="videoPlayer">Video Player</string>
     <string name="exercises">exercícios</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -14,9 +14,11 @@
         <activity
             android:name=".activity.QuestDatabaseActivity"
             android:label="@string/questionsDatabase" />
+
         <activity
             android:name=".activity.MicroLearningActivity"
             android:label="@string/microlearning" />
+
         <activity
             android:name=".activity.PlayerVideoActivity"
             android:label="@string/videoPlayer">
@@ -24,6 +26,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activity.MicroLearningActivity" />
         </activity>
+
         <activity
             android:name=".activity.VideosListActivity"
             android:label="@string/videosList">
@@ -31,6 +34,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activity.VideosActivity" />
         </activity>
+
         <activity
             android:name=".activity.VideosActivity"
             android:label="@string/videos">
@@ -38,6 +42,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activity.RoomsActivity" />
         </activity>
+
         <activity
             android:name=".activity.CollaboratorsActivity"
             android:label="@string/bestCollaborators">
@@ -45,6 +50,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activity.RoomsActivity" />
         </activity>
+
         <activity
             android:name=".activity.RoomsActivity"
             android:label="@string/app_name"
@@ -55,6 +61,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".activity.MainConfigActivity"
             android:label="@string/createwNewRoom">
@@ -62,11 +69,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activity.RoomsActivity" />
         </activity>
+
         <activity android:name=".activity.ChatRoomActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activity.RoomsActivity" />
         </activity>
+
         <activity
             android:name=".activity.LoginActivity"
             android:label="@string/app_name" />
@@ -77,6 +86,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activity.LoginActivity" />
         </activity>
+
         <activity
             android:name=".activity.MessagesActivity"
             android:label="@string/myMessage">
@@ -84,13 +94,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activity.RoomsActivity" />
         </activity>
+
         <activity
             android:name=".activity.ContactsActivity"
-            android:label="@string/contacts">
+            android:label="@string/selectContact">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activity.RoomsActivity" />
         </activity>
+
         <activity android:name=".activity.ChatActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

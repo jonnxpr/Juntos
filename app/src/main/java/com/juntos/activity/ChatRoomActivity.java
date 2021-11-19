@@ -173,6 +173,7 @@ public class ChatRoomActivity extends AppCompatActivity {
                                     Message message = doc.getDocument().toObject(Message.class);
                                     //adiciona a mensagem ao adapter
                                     adapter.add(new ChatRoomActivity.MessageItem(message));
+
                                 }
                             }
                         }

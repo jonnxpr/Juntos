@@ -7,14 +7,19 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.imageview.ShapeableImageView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
@@ -23,6 +28,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.juntos.R;
 import com.juntos.model.User;
+import com.miguelcatalan.materialsearchview.MaterialSearchView;
 import com.squareup.picasso.Picasso;
 import com.xwray.groupie.GroupAdapter;
 import com.xwray.groupie.Item;
@@ -34,7 +40,7 @@ import java.util.List;
 public class ContactsActivity extends AppCompatActivity {
 
     private GroupAdapter adapter;
-
+    private EditText edtSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +71,7 @@ public class ContactsActivity extends AppCompatActivity {
                 return false;
             }
         });
+        edtSearch = findViewById(R.id.editTextSearchContact);
         RecyclerView rv = findViewById(R.id.recycler_contact);
 
         adapter = new GroupAdapter();
@@ -87,7 +94,9 @@ public class ContactsActivity extends AppCompatActivity {
         });
         //Busca usuarios no Firebase
         fetchUsers();
+
     }
+
 
     private void fetchUsers(){
         FirebaseFirestore.getInstance().collection("/users")
@@ -127,7 +136,7 @@ public class ContactsActivity extends AppCompatActivity {
         @Override
         public void bind(@NonNull ViewHolder viewHolder, int position) {
             TextView txtUsername = viewHolder.itemView.findViewById(R.id.textView);
-            ImageView imgPhoto = viewHolder.itemView.findViewById(R.id.imageView_last_message);
+            ShapeableImageView imgPhoto = viewHolder.itemView.findViewById(R.id.imageView_last_message);
 
             txtUsername.setText(user.getUsername());
             Picasso.get().load(user.getProfileUrl()).into(imgPhoto);
@@ -135,7 +144,7 @@ public class ContactsActivity extends AppCompatActivity {
 
         @Override
         public int getLayout() {
-            return R.layout.item_user;
+            return R.layout.item_contact;
         }
     }
 }

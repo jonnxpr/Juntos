@@ -138,9 +138,9 @@ public class RegisterActivity extends AppCompatActivity {
     private void saveUserInFirebase(){
         if(mSelectedUri == null) {
             mSelectedUri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE
-                    + "://" + this.getResources().getResourcePackageName(R.drawable.android)
-                    + '/' + this.getResources().getResourceTypeName(R.drawable.android)
-                    + '/' + this.getResources().getResourceEntryName(R.drawable.android));
+                    + "://" + this.getResources().getResourcePackageName(R.drawable.logotipo_android_black)
+                    + '/' + this.getResources().getResourceTypeName(R.drawable.logotipo_android_black)
+                    + '/' + this.getResources().getResourceEntryName(R.drawable.logotipo_android_black));
         }
 
         Log.i("Teste", "mSelectedUri:"+ mSelectedUri.toString());

@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.imageview.ShapeableImageView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
@@ -104,10 +105,10 @@ public class RoomsActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch(item.getItemId()){
             case R.id.exercises:
-                Toast.makeText(RoomsActivity.this, "Choose a room to questions database", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RoomsActivity.this, R.string.chooseRoomToQuestionDB, Toast.LENGTH_SHORT).show();
                 break;
             case R.id.video :
-                Toast.makeText(RoomsActivity.this, "Choose a room to send a video", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RoomsActivity.this, R.string.chooseRoomToSendVideo, Toast.LENGTH_SHORT).show();
                 break;
             case R.id.logout:
                 String uid = FirebaseAuth.getInstance().getUid();
@@ -175,20 +176,20 @@ public class RoomsActivity extends AppCompatActivity {
         @Override
         public void bind(@NonNull ViewHolder viewHolder, int position) {
             TextView txtRoomName = viewHolder.itemView.findViewById(R.id.textView_room);
-            ImageView imgPhoto = viewHolder.itemView.findViewById(R.id.imageView_room_message);
+            ShapeableImageView imgPhoto = viewHolder.itemView.findViewById(R.id.imageView_room_message);
 
             txtRoomName.setText(room.getRoomName());
             if(room.getProfileUrl() != null && !room.getProfileUrl().isEmpty()) {
                 Picasso.get().load(room.getProfileUrl()).into(imgPhoto);
             }
             else {
-                Picasso.get().load(R.drawable.icone_juntos).into(imgPhoto);
+                Picasso.get().load(R.drawable.teamwork).into(imgPhoto);
             }
         }
 
         @Override
         public int getLayout() {
-            return R.layout.item_room;
+            return R.layout.item_room2;
         }
     }
 }
